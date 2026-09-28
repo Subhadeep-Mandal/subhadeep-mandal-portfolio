@@ -1,0 +1,32 @@
+[
+  {
+    "name": "FireBarrier — AI-Powered Network Firewall",
+    "description": "AI-assisted network traffic analysis and threat detection using packet capture, FastAPI, Scapy and machine-learning components.",
+    "technologies": ["Python", "FastAPI", "Scapy", "Machine Learning"],
+    "url": "https://github.com/Subhadeep-Mandal/FIRE-BARRIER-AINGFW"
+  },
+  {
+    "name": "ReproSense — AI Surveillance & Geospatial Intelligence",
+    "description": "Integrated surveillance and geospatial system combining computer vision, tracking, mapping and real-time communication.",
+    "technologies": ["React", "FastAPI", "YOLOv8", "ByteTrack"],
+    "url": "https://github.com/Subhadeep-Mandal/Repro-Sense"
+  },
+  {
+    "name": "ESPect — IPsec Analyzer",
+    "description": "Network analysis tooling for IPsec experiments, packet capture, traffic classification and report generation.",
+    "technologies": ["FastAPI", "Scapy", "scikit-learn", "ReportLab"],
+    "url": "https://github.com/InnovAuraz/ESPect"
+  },
+  {
+    "name": "RFMO HUB",
+    "description": "Web application work involving Django, JWT authentication and QR-based attendance workflows.",
+    "technologies": ["Django", "JWT", "QR"],
+    "url": "YOUR-RFMO-HUB-REPO-URL"
+  },
+  {
+    "name": "AgroHelp",
+    "description": "A software project combining a Streamlit interface with TensorFlow and Django components for an agriculture-focused use case.",
+    "technologies": ["Python", "TensorFlow", "Streamlit", "Django"],
+    "url": "YOUR-AGROHELP-REPO-URL"
+  }
+]
