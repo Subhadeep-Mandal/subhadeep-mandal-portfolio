@@ -13,5 +13,7 @@
   "logo": "assets/icons/subhadeep-logo.png",
   "favicon": "assets/icons/favicon.ico",
   "heroImage": "assets/images/hero-subhadeep.png",
-  "aboutImage": "assets/images/about-subhadeep.png"
+  "aboutImage": "assets/images/about-subhadeep.png",
+  "certifications": "data/certifications.json",
+  "roadmap": "data/roadmap.json"
 }

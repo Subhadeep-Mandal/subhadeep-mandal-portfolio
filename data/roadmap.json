@@ -1,0 +1,38 @@
+[
+  {
+    "year": "2026",
+    "title": "Finalist, Smart India Hackathon",
+    "description": "Reached the finalist stage with a team project.",
+    "placeholder": false
+  },
+  {
+    "year": "2026",
+    "title": "20+ Hackathons",
+    "description": "Participated in 20+ hackathons and collaborative build events.",
+    "placeholder": false
+  },
+  {
+    "year": "2026",
+    "title": "SAP Certified \u2014 Back-End Developer \u2014 ABAP Cloud",
+    "description": "Certified in ABAP Programming Language, ABAP Cloud Development, ABAP RAP and Clean Core principles for SAP S/4HANA.",
+    "placeholder": false
+  },
+  {
+    "year": "2026",
+    "title": "PLACEHOLDER \u2014 Internship milestone",
+    "description": "Replace this entry with a verified internship, role, or work milestone.",
+    "placeholder": true
+  },
+  {
+    "year": "2026",
+    "title": "PLACEHOLDER \u2014 Competitive programming milestone",
+    "description": "Replace this entry with a verified contest, rating, or problem-solving milestone.",
+    "placeholder": true
+  },
+  {
+    "year": "2027",
+    "title": "PLACEHOLDER \u2014 Graduation / first full-time role",
+    "description": "Replace this entry with your verified graduation or employment milestone.",
+    "placeholder": true
+  }
+]

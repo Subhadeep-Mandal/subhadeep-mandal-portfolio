@@ -1,0 +1,58 @@
+[
+  {
+    "badge": "SAP",
+    "name": "SAP Certified \u2014 Back-End Developer \u2014 ABAP Cloud",
+    "issuer": "SAP",
+    "year": "2026",
+    "placeholder": false,
+    "status": "Verified credential"
+  },
+  {
+    "badge": "Cisco",
+    "name": "Cisco Networking Basics",
+    "issuer": "Cisco Networking Academy",
+    "year": "VERIFY",
+    "placeholder": false,
+    "status": "Add / verify completion year"
+  },
+  {
+    "badge": "AWS",
+    "name": "Cloud Practitioner Foundations",
+    "issuer": "DUMMY \u2014 REPLACE",
+    "year": "REPLACE",
+    "placeholder": true,
+    "status": "Placeholder"
+  },
+  {
+    "badge": "Java",
+    "name": "Java Programming Foundations",
+    "issuer": "DUMMY \u2014 REPLACE",
+    "year": "REPLACE",
+    "placeholder": true,
+    "status": "Placeholder"
+  },
+  {
+    "badge": "SQL",
+    "name": "SQL & Database Foundations",
+    "issuer": "DUMMY \u2014 REPLACE",
+    "year": "REPLACE",
+    "placeholder": true,
+    "status": "Placeholder"
+  },
+  {
+    "badge": "Git",
+    "name": "Git & GitHub Workflow",
+    "issuer": "DUMMY \u2014 REPLACE",
+    "year": "REPLACE",
+    "placeholder": true,
+    "status": "Placeholder"
+  },
+  {
+    "badge": "Cloud",
+    "name": "Cloud & DevOps Foundations",
+    "issuer": "DUMMY \u2014 REPLACE",
+    "year": "REPLACE",
+    "placeholder": true,
+    "status": "Placeholder"
+  }
+]

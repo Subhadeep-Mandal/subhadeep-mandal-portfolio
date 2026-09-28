@@ -1,6 +1,6 @@
 {
-  "languages": ["Java", "Python", "C++", "JavaScript", "TypeScript"],
-  "frameworks_and_tools": ["React", "Node.js", "Express", "FastAPI", "Django", "PostgreSQL", "MongoDB", "Docker"],
-  "platforms": ["Windows", "Ubuntu/Debian", "Kali Linux"],
-  "fundamentals": ["Data Structures & Algorithms", "OOP", "DBMS", "Operating Systems", "Computer Networks", "System Design"]
+  "languages": ["Java", "Python", "C++", "JavaScript", "TypeScript", "SQL", "ABAP"],
+  "frameworks_and_tools": ["React", "Node.js", "Express", "FastAPI", "Django", "MongoDB", "Docker"],
+  "platforms": ["Windows", "Ubuntu/Debian", "Kali Linux", "AWS", "Arch linux", "GCP", "Android"],
+  "fundamentals": ["DSA", "OOP", "DBMS", "Operating Systems", "Computer Networks", "System Design", "Software Engineering"]
 }

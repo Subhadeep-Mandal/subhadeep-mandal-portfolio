@@ -52,3 +52,13 @@ Search the repository for:
 - any incorrect project URL
 
 Do not change the selected hero/About images unless you intentionally want different images.
+
+### Dynamic sections
+
+Certifications are now loaded from `data/certifications.json`. There are 7 cards: your SAP certification, Cisco Networking Basics (verify the year), and five clearly marked placeholders. Replace/remove every placeholder before publishing.
+
+The roadmap is now loaded from `data/roadmap.json` with 6 entries. The final three are explicitly marked placeholders for you to replace with verified milestones.
+
+### Images / responsive layout
+
+The hero image is the supplied `assets/images/hero-subhadeep.png`. The extra CSS hero glow was removed so its transparent edges blend naturally into the site. The About image is the supplied `assets/images/about-subhadeep.png` and is displayed in a 3:4 frame using `object-fit: cover`.
