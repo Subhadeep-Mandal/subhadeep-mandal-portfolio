@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Building an AI-Powered Firewall",
+    "date": "2026-09-20",
+    "readMin": 6,
+    "tags": ["AI", "Cybersecurity", "Python"],
+    "content": "This is the content of the blog..."
+  },
+  {
+    "id": 2,
+    "title": "My Journey with FastAPI",
+    "date": "2026-09-15",
+    "readMin": 4,
+    "tags": ["Python", "FastAPI"],
+    "content": "..."
+  },
+  {
+    "id": 2,
+    "title": "My Journey with FastAPI",
+    "date": "2026-09-15",
+    "readMin": 4,
+    "tags": ["Python", "FastAPI"],
+    "content": "..."
+  },
+  {
+    "id": 2,
+    "title": "My Journey with FastAPI",
+    "date": "2026-09-15",
+    "readMin": 4,
+    "tags": ["Python", "FastAPI"],
+    "content": "..."
+  }
+]
