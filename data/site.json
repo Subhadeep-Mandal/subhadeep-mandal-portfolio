@@ -12,6 +12,7 @@
   "resume": "assets/resume/Subhadeep_Mandal_Resume.pdf",
   "logo": "assets/icons/subhadeep-logo.png",
   "favicon": "assets/icons/favicon.ico",
+  "heroIdentity": "Subhadeep Mandal — Full-Stack Developer | Software Engineer in Kolkata, India.",
   "heroImage": "assets/images/hero-subhadeep.png",
   "aboutImage": "assets/images/about-subhadeep.png",
   "certifications": "data/certifications.json",

@@ -1024,8 +1024,9 @@ input.addEventListener('keydown', function(e){ if(e.key==='Enter') send(); });
         document.querySelectorAll('a[href*="github.com/Subhadeep-Mandal"]').forEach(function(a){a.href=site.github;});
       }
       var identity=document.querySelector('.seo-identity');
-      if(identity && site.name && site.role && site.location){
-        identity.textContent=site.name+' ('+(site.brand||'Dev.SUBHO')+') — '+site.role+' in '+site.location+'.';
+      var identity=document.querySelector('.seo-identity');
+      if(identity && site.heroIdentity){
+      identity.textContent=site.heroIdentity;
       }
     })
     .catch(function(err){console.warn('site.json could not be applied',err);});
@@ -1112,9 +1113,45 @@ input.addEventListener('keydown', function(e){ if(e.key==='Enter') send(); });
     'Windows':5,'Ubuntu/Debian':4,'Kali Linux':3,'macOS':3,
     'Data Structures & Algorithms':5,'OOP':4,'DBMS':4,'Operating Systems':3,'Computer Networks':3,'System Design':3
   };
+    
   function icon(name){
-    return esc(String(name||'').replace(/[^A-Za-z0-9]/g,'').slice(0,2).toUpperCase()||'SK');
+    var icons = {
+        'Java': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
+        'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+        'C++': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg',
+        'JavaScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+        'TypeScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+
+        'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+        'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
+        'Express': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg',
+        'FastAPI': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg',
+        'Django': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg',
+        'MongoDB': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg',
+
+        'Windows': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg',
+        'Ubuntu/Debian': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-plain.svg',
+        'Kali Linux': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kalilinux/kalilinux-original.svg',
+        'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+        'GCP': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg',
+        'Android': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg',
+
+        'SQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
+        'ABAP': 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/sap.svg',
+
+        'DSA': 'https://api.iconify.design/lucide:brackets.svg',
+        'OOP': 'https://api.iconify.design/lucide:boxes.svg',
+        'DBMS': 'https://api.iconify.design/lucide:database.svg',
+        'Operating Systems': 'https://api.iconify.design/lucide:monitor-cog.svg',
+        'Computer Networks': 'https://api.iconify.design/lucide:network.svg',
+        'System Design': 'https://api.iconify.design/lucide:workflow.svg'
+    };
+
+    var src = icons[name];
+
+    return src? '<img class="sk-icon-img" src="' + src + '" alt="' + esc(name) + '" loading="lazy">' : '<span class="sk-fallback">◆</span>';
   }
+
   function splitSkill(name){
     var parts=String(name||'').split(' / ');
     return parts;
