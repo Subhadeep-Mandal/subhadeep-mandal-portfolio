@@ -134,7 +134,7 @@
       var scale=Math.max(0.8, 1.12 - dist/900);
       var opacity=Math.max(0.5, 1.05 - dist/700);
       c.style.transform='scale('+scale.toFixed(3)+')';
-      c.style.opacity=opacity.toFixed(2);
+      c.style.opacity= '1';
       c.style.zIndex=Math.round(scale*100);
     });
     requestAnimationFrame(tick);
@@ -178,9 +178,24 @@
     .then(function(items){
       if(!Array.isArray(items) || !items.length) throw new Error('empty certifications');
       var cards=items.map(function(c){
-        var placeholder=c.placeholder ? ' placeholder' : '';
-        var status=c.status ? '<span class="cert-status">'+esc(c.status)+'</span>' : '';
-        return '<div class="cert-card'+placeholder+'"><div class="cert-badge">'+esc(c.badge || 'CERT')+'</div><h3>'+esc(c.name)+'</h3><p>'+esc(c.issuer || '')+'</p><span class="cert-yr">'+esc(c.year || 'VERIFY')+'</span>'+status+'</div>';
+        var placeholder = c.placeholder ? ' placeholder' : '';
+        var status = c.status
+        ? '<span class="cert-status">' + esc(c.status) + '</span>'
+        : '';
+
+        var badge = c.logo
+        ? '<div class="cert-badge"><img src="' + esc(c.logo) +
+            '" alt="' + esc(c.badge || c.issuer || 'Certificate') +
+            '" loading="lazy"></div>'
+        : '<div class="cert-badge">' + esc(c.badge || 'CERT') + '</div>';
+
+        return '<div class="cert-card' + placeholder + '">' +
+        badge +
+        '<h3>' + esc(c.name) + '</h3>' +
+        '<p>' + esc(c.issuer || '') + '</p>' +
+        '<span class="cert-yr">' + esc(c.year || 'VERIFY') + '</span>' +
+        status +
+        '</div>';
       }).join('');
       var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       track.innerHTML=reduce ? cards : cards+cards;
@@ -1050,22 +1065,49 @@ input.addEventListener('keydown', function(e){ if(e.key==='Enter') send(); });
     ['var(--accent)','var(--accent2)']
   ];
   function card(project,index){
-    var p1=palettes[index%palettes.length][0], p2=palettes[index%palettes.length][1];
-    var safeUrl=String(project.url||'#');
-    var validUrl=safeUrl && !safeUrl.match(/^YOUR-|^#/i);
-    var linkText=validUrl?'View source ↗':'Add repository ↗';
-    return '<div class="pcard">'+
-      '<div class="pshot" data-shots="3"><div class="proj-json-shot">'+
-        '<div class="json-frame on" style="background:linear-gradient(135deg,'+p1+','+p2+')"></div>'+
-        '<div class="json-frame" style="background:radial-gradient(circle at 70% 30%,'+p1+',transparent 60%),radial-gradient(circle at 25% 75%,'+p2+',transparent 55%)"></div>'+
-        '<div class="json-frame" style="background:conic-gradient(from '+(index*55%360)+'deg at 50% 50%,'+p1+','+p2+','+p1+')"></div>'+
-      '</div></div>'+
-      '<div class="pbody"><h3>'+esc(project.name||'Untitled project')+'</h3>'+
-      '<p>'+esc(project.description||'')+'</p>'+
-      '<div class="tags">'+(project.technologies||[]).map(function(t){return '<span>'+esc(t)+'</span>';}).join('')+'</div>'+
-      '<a href="'+(validUrl?esc(safeUrl):'#')+'" '+(validUrl?'target="_blank" rel="noopener"':'aria-disabled="true"')+' class="visit">'+linkText+'</a></div>'+
-      '</div>';
-  }
+
+  var images = Array.isArray(project.images) ? project.images : [];
+
+  var shots = images.map(function(src, i){
+    return '<img class="json-frame' + (i === 0 ? ' on' : '') +
+      '" src="' + esc(src) +
+      '" alt="' + esc(project.name || 'Project screenshot') +
+      ' — screenshot ' + (i + 1) +
+      '" loading="lazy">';
+  }).join('');
+
+  var safeUrl = String(project.url || '#');
+  var validUrl = safeUrl && !safeUrl.match(/^YOUR-|^#/i);
+  var linkText = validUrl ? 'View source ↗' : 'Add repository ↗';
+
+  return '<div class="pcard">' +
+
+    '<div class="pshot" data-shots="' + images.length + '">' +
+      '<div class="proj-json-shot">' +
+        shots +
+      '</div>' +
+    '</div>' +
+
+    '<div class="pbody">' +
+      '<h3>' + esc(project.name || 'Untitled project') + '</h3>' +
+      '<p>' + esc(project.description || '') + '</p>' +
+
+      '<div class="tags">' +
+        (project.technologies || []).map(function(t){
+          return '<span>' + esc(t) + '</span>';
+        }).join('') +
+      '</div>' +
+
+      '<a href="' + (validUrl ? esc(safeUrl) : '#') + '" ' +
+        (validUrl ? 'target="_blank" rel="noopener"' : 'aria-disabled="true"') +
+        ' class="visit">' +
+        linkText +
+      '</a>' +
+
+    '</div>' +
+
+  '</div>';
+}
   function animateProjectFrames(){
     document.querySelectorAll('#projTrack .pcard').forEach(function(c,idx){
       var frames=c.querySelectorAll('.json-frame');
@@ -1156,13 +1198,36 @@ input.addEventListener('keydown', function(e){ if(e.key==='Enter') send(); });
     var parts=String(name||'').split(' / ');
     return parts;
   }
-  function row(name){
-    var lvl=levelMap[name] || levelMap[splitSkill(name)[0]] || 3;
-    var cells='';
-    for(var i=0;i<5;i++) cells+='<span class="cell'+(i<lvl?' on':'')+'"></span>';
-    return '<div class="skill-item"><div class="sk-icon">'+icon(name)+'</div>'+
-      '<div class="sk-info"><span class="nm">'+esc(name)+'</span><span class="lvl">'+(lvl>=4?'Advanced':lvl===3?'Comfortable':'Familiar')+'</span></div>'+
-      '<div class="battery" data-level="'+lvl+'">'+cells+'<span class="nub"></span></div></div>';
+  function row(skill){
+
+    var name = skill.name || '';
+    var logo = skill.logo || '';
+
+    var lvl = levelMap[name] || levelMap[splitSkill(name)[0]] || 3;
+
+    var cells = '';
+    for(var i=0;i<5;i++){
+        cells += '<span class="cell' + (i < lvl ? ' on' : '') + '"></span>';
+    }
+
+    var iconHtml = logo
+        ? '<img class="sk-icon-img" src="' + esc(logo) +
+        '" alt="' + esc(name) + '" loading="lazy">'
+        : '<span class="sk-fallback">◆</span>';
+
+    return '<div class="skill-item">' +
+        '<div class="sk-icon">' + iconHtml + '</div>' +
+        '<div class="sk-info">' +
+        '<span class="nm">' + esc(name) + '</span>' +
+        '<span class="lvl">' +
+            (lvl >= 4 ? 'Advanced' : lvl === 3 ? 'Comfortable' : 'Familiar') +
+        '</span>' +
+        '</div>' +
+        '<div class="battery" data-level="' + lvl + '">' +
+        cells +
+        '<span class="nub"></span>' +
+        '</div>' +
+    '</div>';
   }
   fetch('./data/skills.json',{cache:'no-store'})
     .then(function(r){if(!r.ok) throw new Error('skills.json'); return r.json();})

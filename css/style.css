@@ -1523,6 +1523,51 @@ section { padding: 80px 0 }
   padding: 18px;
 }
 
+.proj-json-shot {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.proj-json-shot .json-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.proj-json-shot .json-frame.on {
+  opacity: 1;
+}
+
+.pshot::after {
+  display: none;
+}
+
+.pshot {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+
+.proj-json-shot {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.proj-json-shot .json-frame {
+  border: 0;
+}
+
+.pbody {
+  border-top: 1px solid var(--line);
+}
 
 /* ─────────────────────────────────────────────
    ROADMAP / ACHIEVEMENTS
@@ -1642,15 +1687,23 @@ section { padding: 80px 0 }
   will-change: transform;
 }
 .cert-badge {
-  width: 52px; height: 52px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent2), var(--accent));
-  color: #fff;
-  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto 16px;
-  font-family: 'Titillium Web', sans-serif;
-  font-weight: 700;
-  font-size: clamp(0.655rem,1.638vw,0.78rem);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+.cert-badge img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
 }
 .cert-card h3    { font-size: clamp(0.823rem,2.058vw,0.98rem); margin-bottom: 6px }
 .cert-card p     { margin: 0; color: var(--soft); font-size: clamp(0.672rem,1.68vw,0.8rem) }

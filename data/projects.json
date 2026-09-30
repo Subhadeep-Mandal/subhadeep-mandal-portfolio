@@ -1,32 +1,88 @@
 [
   {
-    "name": "FireBarrier — AI-Powered Network Firewall",
-    "description": "AI-assisted network traffic analysis and threat detection using packet capture, FastAPI, Scapy and machine-learning components.",
-    "technologies": ["Python", "FastAPI", "Scapy", "Machine Learning"],
-    "url": "https://github.com/Subhadeep-Mandal/FIRE-BARRIER-AINGFW"
+    "name": "FireBarrier – AI-Powered Network Firewall",
+    "description": "AI-powered network intrusion detection and real-time threat blocking system.",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "Scapy",
+      "TensorFlow",
+      "scikit-learn"
+    ],
+    "url": "https://github.com/Subhadeep-Mandal/FIRE-BARRIER-AINGFW",
+    "images": [
+      "assets/images/projects/firebarrier-1.png",
+      "assets/images/projects/firebarrier-2.png",
+      "assets/images/projects/firebarrier-3.png"
+    ]
   },
   {
-    "name": "ReproSense — AI Surveillance & Geospatial Intelligence",
-    "description": "Integrated surveillance and geospatial system combining computer vision, tracking, mapping and real-time communication.",
-    "technologies": ["React", "FastAPI", "YOLOv8", "ByteTrack"],
-    "url": "https://github.com/Subhadeep-Mandal/Repro-Sense"
-  },
-  {
-    "name": "ESPect — IPsec Analyzer",
-    "description": "Network analysis tooling for IPsec experiments, packet capture, traffic classification and report generation.",
-    "technologies": ["FastAPI", "Scapy", "scikit-learn", "ReportLab"],
-    "url": "https://github.com/InnovAuraz/ESPect"
-  },
-  {
-    "name": "RFMO HUB",
-    "description": "Web application work involving Django, JWT authentication and QR-based attendance workflows.",
-    "technologies": ["Django", "JWT", "QR"],
-    "url": "YOUR-RFMO-HUB-REPO-URL"
+    "name": "ReproSense – AI Surveillance & Geospatial Intelligence",
+    "description": "Real-time surveillance and geospatial intelligence system combining computer vision, tracking and mapping.",
+    "technologies": [
+      "C++",
+      "Python",
+      "FastAPI",
+      "React",
+      "YOLOv8",
+      "ByteTrack"
+    ],
+    "url": "https://github.com/Subhadeep-Mandal/Repro-Sense",
+    "images": [
+      "assets/images/projects/reprosense-1.png",
+      "assets/images/projects/reprosense-2.png",
+      "assets/images/projects/reprosense-3.png"
+    ]
   },
   {
     "name": "AgroHelp",
-    "description": "A software project combining a Streamlit interface with TensorFlow and Django components for an agriculture-focused use case.",
-    "technologies": ["Python", "TensorFlow", "Streamlit", "Django"],
-    "url": "YOUR-AGROHELP-REPO-URL"
-  }
+    "description": "Agriculture-focused web application combining TensorFlow, Streamlit and Django.",
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "Streamlit",
+      "Django"
+    ],
+    "url": "https://github.com/Subhadeep-Mandal/The-Farmers-Left-Hand",
+    "images": [
+      "assets/images/projects/agrohelp-1.png",
+      "assets/images/projects/agrohelp-2.png",
+      "assets/images/projects/agrohelp-3.png"
+    ]
+  },
+  {
+  "name": "ESPect – AI-Powered IPsec Traffic Analyzer",
+  "description": "An intelligent IPsec traffic analysis platform that captures, analyzes and classifies encrypted network traffic, providing security insights through a real-time dashboard.",
+  "technologies": [
+    "Python",
+    "FastAPI",
+    "Scapy",
+    "scikit-learn",
+    "React",
+    "WebSockets",
+    "strongSwan",
+    "IPsec"
+  ],
+  "url": "https://github.com/InnovAuraz/ESPect",
+  "images": [
+    "assets/images/projects/espect-1.png",
+    "assets/images/projects/espect-2.png",
+    "assets/images/projects/espect-3.png"
+  ]
+},
+{
+  "name": "Musify – Local Music Player",
+  "description": "A browser-based local music player that lets users store music in a folder and play, pause, skip and control their tracks through a responsive HTML, CSS and JavaScript interface.",
+  "technologies": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Web Audio",
+    "Local File System"
+  ],
+  "url": "#",
+  "images": [
+    "assets/images/projects/musify-1.png"
+  ]
+}
 ]

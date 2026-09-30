@@ -1,6 +1,109 @@
 {
-  "languages": ["Java", "Python", "C++", "JavaScript", "SQL", "ABAP"],
-  "frameworks_and_tools": ["React", "Node.js", "Express", "FastAPI", "Django", "MongoDB"],
-  "platforms": ["Windows", "Ubuntu/Debian", "Kali Linux", "AWS", "GCP", "Android"],
-  "fundamentals": ["DSA", "OOP", "DBMS", "Operating Systems", "Computer Networks", "System Design"]
+  "languages": [
+    {
+      "name": "Java",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+    },
+    {
+      "name": "Python",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+    },
+    {
+      "name": "C++",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+    },
+    {
+      "name": "JavaScript",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    },
+    {
+      "name": "TypeScript",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+    },
+    {
+      "name": "ABAP",
+      "logo": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/sap.svg"
+    }
+  ],
+
+  "frameworks_and_tools": [
+    {
+      "name": "React",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+    },
+    {
+      "name": "Node.js",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+    },
+    {
+      "name": "Express",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+    },
+    {
+      "name": "FastAPI",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+    },
+    {
+      "name": "Django",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"
+    },
+    {
+      "name": "MongoDB",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+    }
+  ],
+
+  "platforms": [
+    {
+      "name": "Windows",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg"
+    },
+    {
+      "name": "Ubuntu/Debian",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-plain.svg"
+    },
+    {
+      "name": "Kali Linux",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kalilinux/kalilinux-original.svg"
+    },
+    {
+      "name": "AWS",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+    },
+    {
+      "name": "GCP",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+    },
+    {
+      "name": "Android",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
+    }
+  ],
+
+  "fundamentals": [
+    {
+      "name": "DSA",
+      "logo": "https://api.iconify.design/lucide:brackets.svg"
+    },
+    {
+      "name": "OOP",
+      "logo": "https://api.iconify.design/lucide:boxes.svg"
+    },
+    {
+      "name": "DBMS",
+      "logo": "https://api.iconify.design/lucide:database.svg"
+    },
+    {
+      "name": "Operating Systems",
+      "logo": "https://api.iconify.design/lucide:monitor-cog.svg"
+    },
+    {
+      "name": "Computer Networks",
+      "logo": "https://api.iconify.design/lucide:network.svg"
+    },
+    {
+      "name": "System Design",
+      "logo": "https://api.iconify.design/lucide:workflow.svg"
+    }
+  ]
 }
