@@ -1,34 +1,85 @@
 [
   {
-    "id": 1,
-    "title": "Building an AI-Powered Firewall",
-    "date": "2026-09-20",
+    "id": "sih-2025-experience",
+    "title": "Smart India Hackathon 2025: The Experience That Changed How I Build",
+    "date": "2025-12-20",
     "readMin": 6,
-    "tags": ["AI", "Cybersecurity", "Python"],
-    "content": "This is the content of the blog..."
+    "excerpt": "SIH 2025 was more than a hackathon for me. It gave me hands-on experience in teamwork, problem solving, communication, pressure handling and turning an idea into something real.",
+    "tags": [
+      "SIH",
+      "Hackathon",
+      "Teamwork",
+      "Learning"
+    ],
+    "emoji": "🚀",
+    "image": "assets/images/blogs/sih-2025.png",
+    "content": "Smart India Hackathon 2025 was much more than another hackathon for me. It became one of those experiences where the real learning happened outside the classroom and beyond the code editor.\n\nWorking on a real problem with a team completely changed the way I looked at software development. Everyone has different strengths, different ideas and different ways of approaching the same problem. Learning how to combine those differences into one direction was one of the most valuable lessons I gained.\n\nSIH gave me hands-on experience with building, testing, debugging and presenting a solution under pressure. Things did not always work on the first attempt. Features broke, assumptions changed and some approaches had to be redesigned. Those moments taught me that software development is not about getting everything right immediately. It is about understanding what went wrong and continuing to improve.\n\nOne of the biggest lessons was teamwork. Building alone and building with a team are completely different experiences. Communication becomes important. Task distribution becomes important. Reviewing someone else's work becomes important. Sometimes the best contribution is not writing another feature, but helping another teammate solve a problem.\n\nThe hackathon also taught me how quickly a project can evolve. An idea that sounds perfect in the beginning can change significantly after research, implementation and testing. We had to keep learning, adapting and making decisions based on what the project actually needed.\n\nI also learned the importance of ownership. When you are part of a team, every component matters. A small unfinished part can affect the complete product. That experience made me more responsible about the code I write and the work I take ownership of.\n\nSIH 2025 helped me understand that a good developer needs more than technical skills. Communication, adaptability, collaboration, patience and the ability to keep working when things become difficult are equally important.\n\nLooking back, one of the biggest things I gained was confidence. Confidence not because everything worked perfectly, but because I learned that even when something breaks, there is always a way to investigate it, learn from it and move forward.\n\nSIH 2025 became a foundation for many of the projects and experiences that followed. It made me want to work on larger problems, learn new technologies and become better at building complete systems with a team."
   },
   {
-    "id": 2,
-    "title": "My Journey with FastAPI",
-    "date": "2026-09-15",
-    "readMin": 4,
-    "tags": ["Python", "FastAPI"],
-    "content": "..."
+    "id": "espect-sih-2026-journey",
+    "title": "My Journey of Building ESPect for Smart India Hackathon 2026",
+    "date": "2026-09-20",
+    "readMin": 8,
+    "excerpt": "From understanding IPsec and encrypted traffic to packet capture, AI classification and real-time analysis, building ESPect has been a deep technical learning journey.",
+    "tags": [
+      "ESPect",
+      "SIH 2026",
+      "AI",
+      "Cybersecurity",
+      "Networking"
+    ],
+    "emoji": "🛡️",
+    "image": "assets/images/blogs/espect-sih-2026.png",
+    "content": "Building ESPect for Smart India Hackathon 2026 has been one of the most technically interesting journeys I have worked on.\n\nThe idea was not to build just another dashboard. We wanted to create an intelligent IPsec traffic analysis platform capable of capturing traffic, analysing network characteristics, classifying encrypted traffic and presenting useful security insights through a real-time interface.\n\nThe project immediately pushed me outside my comfort zone because it required multiple technologies to work together. Networking, cybersecurity, packet analysis, machine learning, backend development and frontend development all became part of one system.\n\nOne of the first major learning areas was IPsec itself. Encrypted traffic creates a very different analysis problem because application content is hidden. That meant we had to think carefully about what information can still be observed and how those observable characteristics can be used for analysis.\n\nWorking with Scapy gave me hands-on experience with packet capture and network traffic inspection. FastAPI became an important part of the backend, while the dashboard had to make complex analysis easier to understand.\n\nAnother important learning area was designing experiments and datasets. Different IPsec configurations such as transport and tunnel modes, encryption algorithms, integrity settings, Diffie-Hellman groups, PFS options, IP versions and traffic types create many combinations. Handling that properly taught me that a machine learning project is not only about the model. Data collection, experiment design, feature extraction and reproducibility matter just as much.\n\nThe project also made me think more deeply about classification. Instead of treating AI as something separate from the application, I started looking at it as one part of a complete pipeline: capture data, process it, extract useful information, classify traffic, assess security implications and finally present the result.\n\nSome of the most important lessons came from debugging. A problem visible in the frontend could actually originate in the backend. A backend issue could come from packet capture. A model behaving unexpectedly could be caused by the dataset or feature pipeline. ESPect taught me to trace problems across layers instead of fixing only the visible symptom.\n\nThere were many moments when the system did not behave as expected. Those moments were frustrating sometimes, but they were also where the deepest learning happened. Every error forced me to understand another part of the architecture.\n\nBuilding ESPect also strengthened my teamwork and project-management experience. A technically complex project becomes much easier when responsibilities are divided clearly, ideas are discussed openly and teammates help each other through difficult problems.\n\nESPect is not only a hackathon project for me. It represents a stage in my development where I started connecting networking, cybersecurity, AI and software engineering into one system.\n\nThe biggest takeaway from the journey is that ambitious projects teach you far more than tutorials do. Every obstacle forces you to learn something that you would probably never understand by simply reading about it."
   },
   {
-    "id": 2,
-    "title": "My Journey with FastAPI",
-    "date": "2026-09-15",
-    "readMin": 4,
-    "tags": ["Python", "FastAPI"],
-    "content": "..."
+    "id": "firebarrier-journey",
+    "title": "FireBarrier: Building an AI-Powered Firewall and the Journey Toward Patenting It",
+    "date": "2026-08-10",
+    "readMin": 8,
+    "excerpt": "FireBarrier started as an ambitious cybersecurity idea and grew into a serious engineering journey involving AI, networking, teamwork, debugging and the patenting process.",
+    "tags": [
+      "FireBarrier",
+      "AI",
+      "Cybersecurity",
+      "Networking",
+      "Innovation"
+    ],
+    "emoji": "🔥",
+    "image": "assets/images/blogs/firebarrier.png",
+    "content": "FireBarrier started with a simple but ambitious idea: can a network firewall become more intelligent by combining multiple AI-based detection techniques?\n\nThat question became the starting point for a much larger engineering journey.\n\nInstead of treating the firewall as only a traditional rule-based system, we explored an architecture where different layers could analyse network activity and identify potentially suspicious behaviour. Working with packet capture, machine learning and deep learning turned the project into a much more challenging problem than we originally expected.\n\nThe project gave me practical experience with technologies such as FastAPI, Scapy, machine learning models and neural-network-based approaches. But the most difficult part was not using these technologies individually. The challenge was making them work together as one reliable system.\n\nWorking with network packets taught me how different real-world traffic can look and how difficult it can be to separate normal behaviour from potentially abnormal activity. A security system also has to be careful about false positives. If a firewall starts blocking everything, it stops being useful even if the detection system looks aggressive.\n\nThose problems resulted in a lot of debugging. We had to investigate packet counts, detection logic, thresholds and application behaviour. Every issue forced us to understand our own architecture more deeply.\n\nTeamwork was one of the strongest parts of FireBarrier. Different parts of the project required different types of thinking. Dividing responsibilities, reviewing implementations and troubleshooting together helped the project move forward much faster.\n\nAs the project matured, another important part of the journey began: the patenting process. That introduced a completely different perspective on the project.\n\nBuilding software that works is one challenge. Clearly documenting an idea, its architecture, its approach and what makes it innovative is another. The patenting journey made me more conscious about documentation and about how technical ideas should be communicated beyond source code.\n\nIt also changed the way I think about innovation. An idea becomes much more meaningful when it is implemented, tested, documented and communicated properly.\n\nFireBarrier taught me about AI, networking, cybersecurity and system design, but it also taught me how important teamwork is when a project becomes complex.\n\nThere were difficult days, unexpected bugs and approaches that had to be changed. But those experiences are exactly what made the journey valuable.\n\nWhat started as a project gradually became something much bigger for our team. It became a learning experience about engineering, innovation, collaboration and the process of turning an idea into something that can potentially have lasting value."
   },
   {
-    "id": 2,
-    "title": "My Journey with FastAPI",
-    "date": "2026-09-15",
-    "readMin": 4,
-    "tags": ["Python", "FastAPI"],
-    "content": "..."
+    "id": "agentic-coding-learning",
+    "title": "Learning Agentic Coding: Why Building and Deploying with AI Feels So Much More Fun",
+    "date": "2026-09-05",
+    "readMin": 7,
+    "excerpt": "Agentic coding is changing the way I build software. Using AI agents for exploration, coding, debugging, deployment and iteration has made the development process faster and much more interesting.",
+    "tags": [
+      "Agentic Coding",
+      "AI",
+      "Developer Tools",
+      "Learning"
+    ],
+    "emoji": "🤖",
+    "image": "assets/images/blogs/agentic-coding.png",
+    "content": "One of the most exciting areas I have been learning recently is agentic coding.\n\nEarlier, I mainly thought of AI as a tool for generating snippets, explaining errors or helping with individual functions. Working with coding agents feels different because the interaction can happen at a much larger level.\n\nAn agent can help inspect a project, understand the relationships between files, investigate an error, make changes, test an approach and help continue the development process. That changes the development workflow significantly.\n\nFor me, the biggest benefit is reducing repetitive work. When a project has many files and a bug involves multiple parts of the application, manually tracing everything can take a lot of time. An agent can help explore that structure quickly and point toward the areas that deserve attention.\n\nThe most interesting part is the development loop. I can start with an idea, create a first version, test it, identify a problem, ask an agent to investigate it, make a targeted change, deploy the project and then continue improving it.\n\nDeployment has become part of the learning process too. Instead of thinking about deployment as the final step after coding is finished, I now see it as part of development itself. Build something, deploy it, observe the behaviour, debug it and improve it.\n\nAgentic coding has also taught me something important: having an AI agent does not remove the need for a developer. It increases the importance of understanding what the system should do.\n\nAn agent can make a change quickly, but I still need to decide whether that change is correct, whether it fits the architecture, whether it introduces a security problem and whether it actually solves the intended problem.\n\nThat balance is what makes the experience enjoyable for me. The agent can handle a lot of repetitive exploration while I focus more on the architecture, the idea and the decisions that matter.\n\nIt has also made experimentation easier. I can try a new approach without feeling that every experiment will require hours of repetitive setup work.\n\nAnother interesting benefit is learning. When an agent investigates an issue with me, I can follow the reasoning, inspect the files it changes and understand the relationship between different parts of the system.\n\nI am still learning how to use these tools effectively. The better I understand prompting, project structure, testing and architecture, the more useful the agents become.\n\nThe most exciting thing about agentic coding is that the tools are still evolving. I am learning alongside them, experimenting with different workflows and discovering new ways to combine human creativity with AI assistance.\n\nFor me, agentic coding is not about replacing development. It is about making the process more dynamic, faster to iterate and much more fun to explore."
+  },
+  {
+    "id": "sap-abap-hana-rag",
+    "title": "From SAP Certification to HANA, ABAP and RAG: Learning Beyond the Certificate",
+    "date": "2026-09-25",
+    "readMin": 8,
+    "excerpt": "My SAP certification opened a new direction in my learning. From ABAP Cloud and HANA to exploring RAG and modern AI systems, I have been enjoying the process of learning technologies outside my usual stack.",
+    "tags": [
+      "SAP",
+      "ABAP",
+      "HANA",
+      "RAG",
+      "Learning"
+    ],
+    "emoji": "☁️",
+    "image": "assets/images/blogs/sap-abap-hana-rag.png",
+    "content": "Getting my SAP Certified — Back-End Developer — ABAP Cloud certification was not the end of a learning journey. For me, it became the beginning of a new one.\n\nWorking with ABAP introduced me to a technology ecosystem that was different from many of the tools I had been using in my regular projects. It gave me another perspective on backend development and encouraged me to explore enterprise software more deeply.\n\nPreparing for the certification required focused study, but the most valuable part started after that. I became more interested in the technologies around ABAP, especially HANA and the way enterprise systems handle data, business logic and scalable backend applications.\n\nThis experience reminded me that being a developer is not about staying inside one comfortable technology stack. The ability to move into unfamiliar areas, learn the fundamentals and start building is a skill by itself.\n\nThat mindset encouraged me to explore technologies beyond SAP as well. Recently, I have been learning about Retrieval-Augmented Generation, commonly called RAG, and exploring how modern AI applications can combine language models with external knowledge sources.\n\nRAG is particularly interesting to me because it connects information retrieval with generative AI. Instead of expecting a model to know everything, an application can retrieve relevant information and use that information as context while producing a response.\n\nLearning these concepts alongside ABAP and HANA has been an interesting experience because the technologies look different on the surface but share many fundamental ideas. Data, systems, backend logic and useful information are at the centre of all of them.\n\nThe SAP journey also taught me that certificates are valuable milestones, but the real benefit comes from what you do after earning one. A certificate can prove that you learned something. Continuing to explore the technology shows that you are genuinely curious about where it can take you.\n\nRight now, I am enjoying experimenting with different technologies and trying to understand where they fit together. ABAP, HANA, AI, RAG and modern development tools are giving me exposure to very different ways of building software.\n\nI do not want my learning to stop at one technology. I want every new technology to become a doorway into another area of understanding.\n\nThat is probably my biggest takeaway from the SAP certification: learning one new technology can completely change the direction of what you become curious about next.\n\nThe certificate was one milestone. The real journey is everything I am learning after it."
   }
 ]

@@ -788,26 +788,52 @@ input.addEventListener('keydown', function(e){ if(e.key==='Enter') send(); });
     return (
       '<div class="blog-slide" style="--vis:'+visible+'">'+
         '<article class="blog-card" data-id="'+escapeHtml(p.id)+'">'+
-          '<div class="blog-cover" data-cover="'+escapeHtml(p.id)+'" style="background:linear-gradient(135deg,var(--accent2),var(--accent))"><span class="blog-cover-emoji">'+escapeHtml(p.emoji || '📝')+'</span></div>'+
+          '<div class="blog-cover" data-cover="'+escapeHtml(p.id)+'">'+(p.image
+          ? '<img src="'+escapeHtml(p.image)+'" alt="'+escapeHtml(p.title)+'" loading="lazy">'
+          : '<div class="blog-cover-fallback" style="background:linear-gradient(135deg,var(--accent2),var(--accent))">'+
+          '<span class="blog-cover-emoji">'+escapeHtml(p.emoji || '📝')+'</span>'+
+          '</div>')+'</div>'+
           '<div class="blog-body">'+
             '<div class="blog-meta">'+fmtDate(p.date)+'<span class="sep">·</span>'+escapeHtml(String(p.readMin || 1))+' min read</div>'+
             '<h3 data-title="'+escapeHtml(p.id)+'">'+escapeHtml(p.title)+'</h3>'+
             '<p class="excerpt">'+escapeHtml(p.excerpt)+'</p>'+
-            '<div class="tags">'+(Array.isArray(p.tags) ? p.tags : []).map(function(t){return '<span>'+escapeHtml(t)+'</span>';}).join('')+'</div>'+
-            '<div class="blog-foot"><div class="blog-coming-mini">♡ Likes · 💬 Comments <span>coming soon</span></div></div>'+
+            '<div class="tags">'+(Array.isArray(p.tags) ? p.tags : []).map(function(t){return '<span>'+escapeHtml(t)+'</span>';}).join('')+'</div>'+ 
+            '<div class="blog-foot">'+
+            '<button class="blog-read" data-read="'+escapeHtml(p.id)+'">'+
+            'Read Article'+
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'+
+            '<path d="M5 12h14M13 6l6 6-6 6"/>'+
+            '</svg>'+
+            '</button>'+
+            '<div class="blog-coming-mini">♡ Likes · 💬 Comments <span>coming soon</span></div>'+
+            '</div>'+
           '</div>'+
         '</article>'+
       '</div>'
     );
   }
   function positionArrows(){
-    var card = GRID.querySelector('.blog-card');
+
+    var cover = GRID.querySelector('.blog-cover');
+    var carousel = document.querySelector('.blog-carousel');
+
     var prevBtn = document.getElementById('blogPrev');
     var nextBtn = document.getElementById('blogNext');
-    if(!card){ prevBtn.style.top=''; nextBtn.style.top=''; return; }
-    var top = card.getBoundingClientRect().height / 2;
-    prevBtn.style.top = top + 'px';
-    nextBtn.style.top = top + 'px';
+
+    if(!cover || !carousel){
+      prevBtn.style.top = '';
+      nextBtn.style.top = '';
+      return;
+    }
+
+    var coverRect = cover.getBoundingClientRect();
+    var carouselRect = carousel.getBoundingClientRect();
+
+    var coverTop = coverRect.top - carouselRect.top;
+    var coverCenter = coverTop + (coverRect.height / 2);
+
+    prevBtn.style.top = coverCenter + 'px';
+    nextBtn.style.top = coverCenter + 'px';
   }
   function slideStep(){
     var first = GRID.querySelector('.blog-slide');
@@ -928,9 +954,31 @@ input.addEventListener('keydown', function(e){ if(e.key==='Enter') send(); });
     startAutoplay();
   }
   function bindCardEvents(){
-    Array.prototype.forEach.call(GRID.querySelectorAll('[data-cover],[data-title]'), function(el){
-      el.addEventListener('click', function(){ openReader(el.getAttribute('data-cover') || el.getAttribute('data-title')); });
-    });
+    Array.prototype.forEach.call(
+      GRID.querySelectorAll('[data-cover],[data-title]'),
+      function(el){
+        el.addEventListener('click', function(){
+          openReader(
+            el.getAttribute('data-cover') ||
+            el.getAttribute('data-title')
+          );
+        });
+      }
+    );
+
+    Array.prototype.forEach.call(
+      GRID.querySelectorAll('[data-read]'),
+      function(btn){
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          e.stopPropagation();
+
+          openReader(
+            btn.getAttribute('data-read')
+          );
+        });
+      }
+    );
   }
   function openReader(id){
     var post = posts.filter(function(p){ return p.id === id; })[0];
