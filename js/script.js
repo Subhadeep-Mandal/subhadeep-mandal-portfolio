@@ -714,39 +714,301 @@ function addMsg(text, who){
   body.appendChild(d);
   body.scrollTop=body.scrollHeight;
 }
-var replies={
-  projects:"The Projects section contains selected work including FireBarrier, ReproSense, ESPect, RFMO HUB and AgroHelp.",
-  skills:"I work across Java, Python, JavaScript/TypeScript, React, Node.js, FastAPI, Django, databases, machine learning and networking. See the Skills section for the current breakdown.",
-  achievements:"My listed milestones include Smart India Hackathon finalist, participation in 20+ hackathons, and SAP Certified — Back-End Developer — ABAP Cloud.",
-  contact:"Best way in is the contact form just below, or email subhadeepm608@gmail.com directly.",
-  resume:"You can view or download the résumé from the button in the top nav.",
-  default:"Good question — for anything specific, the contact form below reaches Subhadeep directly."
+var replies = {
+
+  hello:
+    "Hi, I'm Byte 🤖. I'm Subhadeep Mandal's portfolio assistant. Ask me about his projects, skills, certifications, achievements, journey, resume or contact details.",
+
+  about:
+    "Subhadeep Mandal is a Full-Stack Developer and Computer Science and Engineering student at Narula Institute of Technology, Kolkata. He works across backend development, AI, cybersecurity, networking and modern web technologies.",
+
+  projects:
+    "Subhadeep's projects include FireBarrier, an AI-powered network firewall; ESPect, an AI-powered IPsec traffic analyzer; ReproSense, an integrated AI surveillance and geospatial intelligence platform; RFMO HUB; AgroHelp; and Musicify.",
+
+  firebarrier:
+    "FireBarrier is an AI-powered network firewall project built with a team. It combines networking, packet analysis and AI-based detection approaches, and the project was taken forward through copyright registration.",
+
+  espect:
+    "ESPect is an AI-powered IPsec traffic analyzer being developed for Smart India Hackathon 2026. It involves IPsec, packet capture, Scapy, FastAPI, machine learning, React and real-time analysis.",
+
+  certifications:
+    "Subhadeep's certifications and milestones include SAP Back-End Developer — ABAP Cloud (2026), NPTEL Java Programming — Elite + Gold Medalist (2025), Cisco Networking (2025), Google Cloud Champions Milestone (2024), and Cyber Security & Ethical Hacking from Ardent (2024).",
+
+  sap:
+    "Subhadeep earned the SAP Certified — Back-End Developer — ABAP Cloud certification in 2026. This started a new learning direction around ABAP, HANA and enterprise backend development, along with exploring newer technologies such as RAG.",
+
+  skills:
+    "Subhadeep works with Java, Python, C++, JavaScript, TypeScript, ABAP, React, Node.js, Express, FastAPI, Django, MongoDB, PostgreSQL, Docker, AWS, networking, machine learning and cybersecurity.",
+
+  abap:
+    "ABAP became part of Subhadeep's technology journey through SAP certification. He is exploring ABAP Cloud, HANA and enterprise backend development.",
+
+  rag:
+    "Subhadeep is currently exploring Retrieval-Augmented Generation (RAG) and modern AI application workflows as part of his ongoing learning.",
+
+  agentic:
+    "Subhadeep has been exploring agentic coding and AI-assisted development workflows, using agents for coding, debugging, experimentation, deployment and iteration.",
+
+  achievements:
+    "Subhadeep's milestones include SAP certification in 2026, HackOn NIT finalist in 2026, Smart India Hackathon finalist in 2025, FireBarrier copyright work in 2025, HackOnIT finalist in 2024, Cisco networking certification in 2025, and participation in 20+ hackathons.",
+
+  roadmap:
+    "The current journey starts with Narula Institute of Technology in 2023, followed by Cisco Networking and HackOnIT in 2024, SIH finalist and FireBarrier work in 2025, and SAP certification plus HackOn NIT finalist milestones in 2026.",
+
+  sih:
+    "Smart India Hackathon 2025 was an important hands-on experience in teamwork, problem solving, communication, pressure handling and building a real solution with a team. ESPect continues that journey toward SIH 2026.",
+
+  hackathon:
+    "Subhadeep has participated in 20+ hackathons and has reached finalist stages including HackOnIT 2024, Smart India Hackathon 2025 and HackOn NIT 2026.",
+
+  education:
+    "Subhadeep started his B.Tech journey in Computer Science and Engineering at Narula Institute of Technology in 2023.",
+
+  blog:
+    "The Blog section covers Subhadeep's experiences with SIH, ESPect, FireBarrier, agentic coding, SAP, ABAP, HANA and his ongoing exploration of RAG and AI.",
+
+  contact:
+    "You can reach Subhadeep through the contact form or directly at subhadeepm608@gmail.com. His GitHub is github.com/Subhadeep-Mandal and his LinkedIn is linkedin.com/in/subhadeep-mandal-a0a7b7315/.",
+
+  resume:
+    "You can view or download Subhadeep's résumé using the résumé button in the navigation or footer.",
+
+  default:
+    "I can answer questions about Subhadeep's projects, skills, certifications, achievements, education, blog, AI learning journey, résumé or contact details."
 };
+
+
 function respond(key, label){
   addMsg(label, 'user');
-  setTimeout(function(){ addMsg(replies[key] || replies.default, 'bot'); }, 500);
+
+  setTimeout(function(){
+    addMsg(
+      replies[key] || replies.default,
+      'bot'
+    );
+  }, 500);
 }
+
+
 document.getElementById('quickChips').addEventListener('click', function(e){
-  var b=e.target.closest('.qchip');
+
+  var b = e.target.closest('.qchip');
+
   if(!b) return;
-  respond(b.getAttribute('data-q'), b.textContent);
+
+  respond(
+    b.getAttribute('data-q'),
+    b.textContent
+  );
 });
-var input=document.getElementById('chatInput');
+
+
+var input = document.getElementById('chatInput');
+
+
 function send(){
-  var v=input.value.trim();
+
+  var v = input.value.trim();
+
   if(!v) return;
-  var key='default';
-  var lv=v.toLowerCase();
-  if(lv.indexOf('project')>-1) key='projects';
-  else if(lv.indexOf('skill')>-1) key='skills';
-  else if(lv.indexOf('achiev')>-1||lv.indexOf('award')>-1) key='achievements';
-  else if(lv.indexOf('contact')>-1||lv.indexOf('email')>-1||lv.indexOf('hire')>-1) key='contact';
-  else if(lv.indexOf('resume')>-1||lv.indexOf('cv')>-1) key='resume';
-  addMsg(v,'user'); input.value='';
-  setTimeout(function(){ addMsg(replies[key],'bot'); }, 500);
+
+  var lv = v.toLowerCase();
+  var key = 'default';
+
+
+  /* Greetings */
+  if(
+    lv === 'hi' ||
+    lv === 'hello' ||
+    lv === 'hey' ||
+    lv.indexOf('who are you') > -1
+  ){
+    key = 'hello';
+  }
+
+
+  /* About */
+  else if(
+    lv.indexOf('about subhadeep') > -1 ||
+    lv.indexOf('who is subhadeep') > -1 ||
+    lv.indexOf('about you') > -1
+  ){
+    key = 'about';
+  }
+
+
+  /* Specific projects */
+  else if(
+    lv.indexOf('firebarrier') > -1 ||
+    lv.indexOf('fire barrier') > -1
+  ){
+    key = 'firebarrier';
+  }
+
+  else if(
+    lv.indexOf('espect') > -1 ||
+    lv.indexOf('ipsec') > -1
+  ){
+    key = 'espect';
+  }
+
+
+  /* Certifications */
+  else if(
+    lv.indexOf('certification') > -1 ||
+    lv.indexOf('certificate') > -1 ||
+    lv.indexOf('certified') > -1
+  ){
+    key = 'certifications';
+  }
+
+
+  /* SAP / ABAP */
+  else if(
+    lv.indexOf('sap') > -1
+  ){
+    key = 'sap';
+  }
+
+  else if(
+    lv.indexOf('abap') > -1 ||
+    lv.indexOf('hana') > -1
+  ){
+    key = 'abap';
+  }
+
+
+  /* RAG */
+  else if(
+    lv.indexOf('rag') > -1 ||
+    lv.indexOf('retrieval augmented') > -1
+  ){
+    key = 'rag';
+  }
+
+
+  /* Agentic coding */
+  else if(
+    lv.indexOf('agentic') > -1 ||
+    lv.indexOf('coding agent') > -1 ||
+    lv.indexOf('ai agent') > -1
+  ){
+    key = 'agentic';
+  }
+
+
+  /* Projects */
+  else if(
+    lv.indexOf('project') > -1 ||
+    lv.indexOf('built') > -1 ||
+    lv.indexOf('work') > -1
+  ){
+    key = 'projects';
+  }
+
+
+  /* Skills */
+  else if(
+    lv.indexOf('skill') > -1 ||
+    lv.indexOf('technology') > -1 ||
+    lv.indexOf('tech stack') > -1 ||
+    lv.indexOf('language') > -1
+  ){
+    key = 'skills';
+  }
+
+
+  /* Achievements */
+  else if(
+    lv.indexOf('achievement') > -1 ||
+    lv.indexOf('award') > -1 ||
+    lv.indexOf('milestone') > -1 ||
+    lv.indexOf('finalist') > -1
+  ){
+    key = 'achievements';
+  }
+
+
+  /* Roadmap / journey */
+  else if(
+    lv.indexOf('roadmap') > -1 ||
+    lv.indexOf('journey') > -1 ||
+    lv.indexOf('timeline') > -1
+  ){
+    key = 'roadmap';
+  }
+
+
+  /* SIH / Hackathons */
+  else if(
+    lv.indexOf('sih') > -1 ||
+    lv.indexOf('smart india hackathon') > -1 ||
+    lv.indexOf('hackathon') > -1 ||
+    lv.indexOf('hackonit') > -1 ||
+    lv.indexOf('hackon nit') > -1
+  ){
+    key = 'sih';
+  }
+
+
+  /* Education */
+  else if(
+    lv.indexOf('education') > -1 ||
+    lv.indexOf('college') > -1 ||
+    lv.indexOf('narula') > -1
+  ){
+    key = 'education';
+  }
+
+
+  /* Blog */
+  else if(
+    lv.indexOf('blog') > -1 ||
+    lv.indexOf('article') > -1
+  ){
+    key = 'blog';
+  }
+
+
+  /* Contact */
+  else if(
+    lv.indexOf('contact') > -1 ||
+    lv.indexOf('email') > -1 ||
+    lv.indexOf('hire') > -1 ||
+    lv.indexOf('reach') > -1
+  ){
+    key = 'contact';
+  }
+
+
+  /* Resume */
+  else if(
+    lv.indexOf('resume') > -1 ||
+    lv.indexOf('résumé') > -1 ||
+    lv.indexOf('cv') > -1
+  ){
+    key = 'resume';
+  }
+
+
+  addMsg(v, 'user');
+
+  input.value = '';
+
+  setTimeout(function(){
+    addMsg(
+      replies[key] || replies.default,
+      'bot'
+    );
+  }, 500);
 }
-document.getElementById('chatSend').onclick=send;
-input.addEventListener('keydown', function(e){ if(e.key==='Enter') send(); });
+
+
+document.getElementById('chatSend').onclick = send;
+
+input.addEventListener('keydown', function(e){
+  if(e.key === 'Enter') send();
+});
 // ---------- blog: static JSON source ----------
 (function(){
   var GRID = document.getElementById('blogGrid');

@@ -1,38 +1,44 @@
 [
   {
     "year": "2026",
-    "title": "Finalist, Smart India Hackathon",
-    "description": "Reached the finalist stage with a team project.",
+    "title": "SAP Certified — Back-End Developer — ABAP Cloud",
+    "description": "Earned SAP certification in ABAP Cloud and expanded my backend development journey into SAP technologies, HANA and enterprise software.",
     "placeholder": false
   },
   {
     "year": "2026",
-    "title": "20+ Hackathons",
-    "description": "Participated in 20+ hackathons and collaborative build events.",
+    "title": "HackOn NIT Finalist",
+    "description": "Reached the finalist stage at HackOn NIT, gaining deeper experience in competitive problem solving, rapid development and team collaboration.",
     "placeholder": false
   },
   {
-    "year": "2026",
-    "title": "SAP Certified \u2014 Back-End Developer \u2014 ABAP Cloud",
-    "description": "Certified in ABAP Programming Language, ABAP Cloud Development, ABAP RAP and Clean Core principles for SAP S/4HANA.",
+    "year": "2025",
+    "title": "Smart India Hackathon Finalist",
+    "description": "Reached the finalist stage of Smart India Hackathon 2025 with a team project, gaining hands-on experience in innovation, teamwork and building solutions for real-world problems.",
     "placeholder": false
   },
   {
-    "year": "2026",
-    "title": "PLACEHOLDER \u2014 Internship milestone",
-    "description": "Replace this entry with a verified internship, role, or work milestone.",
-    "placeholder": true
+    "year": "2025",
+    "title": "FireBarrier — Copyright",
+    "description": "Worked with my team on FireBarrier, an AI-powered cybersecurity project, and took the project forward through the copyright registration process.",
+    "placeholder": false
   },
   {
-    "year": "2026",
-    "title": "PLACEHOLDER \u2014 Competitive programming milestone",
-    "description": "Replace this entry with a verified contest, rating, or problem-solving milestone.",
-    "placeholder": true
+    "year": "2024",
+    "title": "HackOnIT Finalist",
+    "description": "Reached the finalist stage at HackOnIT, strengthening my skills in rapid prototyping, problem solving and collaborative software development.",
+    "placeholder": false
   },
   {
-    "year": "2027",
-    "title": "PLACEHOLDER \u2014 Graduation / first full-time role",
-    "description": "Replace this entry with your verified graduation or employment milestone.",
-    "placeholder": true
+    "year": "2024",
+    "title": "Cisco Networking Certified",
+    "description": "Completed Cisco Networking certification and strengthened my understanding of computer networking fundamentals and network technologies.",
+    "placeholder": false
+  },
+  {
+    "year": "2023",
+    "title": "Started My Journey at Narula Institute of Technology",
+    "description": "Started my B.Tech journey in Computer Science and Engineering at Narula Institute of Technology, beginning a deeper exploration of software development and technology.",
+    "placeholder": false
   }
 ]

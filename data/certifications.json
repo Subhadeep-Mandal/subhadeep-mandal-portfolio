@@ -9,6 +9,15 @@
     "status": "Verified Credential"
   },
   {
+    "name": "Java Programming",
+    "issuer": "NPTEL",
+    "year": "2025",
+    "badge": "NPTEL",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    "placeholder": false,
+    "status": "Elite + Gold Medalist"
+  },
+  {
     "name": "Cisco Networking Basics",
     "issuer": "Cisco Networking Academy",
     "year": "2025",
@@ -18,30 +27,21 @@
     "status": "Verified Credential"
   },
   {
-    "name": "AWS Certified Cloud Practitioner Foundations",
-    "issuer": "Amazon Web Services",
-    "year": "VERIFY",
-    "badge": "AWS",
-    "logo": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonwebservices.svg",
-    "placeholder": true,
-    "status": "Placeholder"
+    "name": "Google Cloud Champions Milestone",
+    "issuer": "Google Cloud",
+    "year": "2024",
+    "badge": "Google Cloud",
+    "logo": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlecloud.svg",
+    "placeholder": false,
+    "status": "Milestone"
   },
   {
-    "name": "Git & GitHub Workflow",
-    "issuer": "GitHub",
-    "year": "VERIFY",
-    "badge": "GitHub",
-    "logo": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg",
-    "placeholder": true,
-    "status": "Placeholder"
-  },
-  {
-    "name": "Cloud & DevOps Foundations",
-    "issuer": "Cloud",
-    "year": "VERIFY",
-    "badge": "Cloud",
-    "logo": "https://api.iconify.design/lucide:cloud.svg",
-    "placeholder": true,
-    "status": "Placeholder"
+    "name": "Cyber Security & Ethical Hacking",
+    "issuer": "Ardent",
+    "year": "2024",
+    "badge": "Ardent",
+    "logo": "https://api.iconify.design/lucide:shield-check.svg",
+    "placeholder": false,
+    "status": "Completed"
   }
 ]

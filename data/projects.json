@@ -9,7 +9,7 @@
       "TensorFlow",
       "scikit-learn"
     ],
-    "url": "https://github.com/Subhadeep-Mandal/FIRE-BARRIER-AINGFW",
+    "url": "https://github.com/Subhadeep-Mandal/Fire-Barrier-AI-Firewall",
     "images": [
       "assets/images/projects/firebarrier-1.png",
       "assets/images/projects/firebarrier-2.png",
@@ -63,7 +63,7 @@
     "strongSwan",
     "IPsec"
   ],
-  "url": "https://github.com/InnovAuraz/ESPect",
+  "url": "https://github.com/InnovAuraz/ESPect/tree/subhadeep",
   "images": [
     "assets/images/projects/espect-1.png",
     "assets/images/projects/espect-2.png",
@@ -80,7 +80,7 @@
     "Web Audio",
     "Local File System"
   ],
-  "url": "#",
+  "url": "https://github.com/Subhadeep-Mandal/Any-Time-Any-Where-Music",
   "images": [
     "assets/images/projects/musify-1.png"
   ]

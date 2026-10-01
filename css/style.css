@@ -29,6 +29,26 @@
   --line:    rgba(255,255,255,.12);
 }
 
+:root[data-theme="dark"] #blogReaderOverlay {
+  background: rgba(8, 8, 12, 0.212);
+}
+
+:root[data-theme="dark"] #blogReaderOverlay > * {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.07),
+      rgba(255,255,255,.025)
+    ),
+    rgba(18, 18, 24, 0.441);
+
+  border: 1px solid rgba(255,255,255,.14);
+
+  box-shadow:
+    0 24px 80px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.06);
+}
+
 
 /* ─────────────────────────────────────────────
    RESET & BASE
@@ -2855,7 +2875,7 @@ footer {
    ========================================================= */
 
 #blogReaderOverlay {
-  background: rgba(8, 8, 12, 0);
+  background: rgba(246, 245, 241, 0.36);
   backdrop-filter: blur(16px) saturate(125%);
   -webkit-backdrop-filter: blur(16px) saturate(125%);
 }
@@ -2865,16 +2885,16 @@ footer {
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,.07),
-      rgba(255,255,255,.025)
+      rgba(255, 255, 255, 0),
+      rgba(255,255,255,.22)
     ),
-    rgba(18,18,24,.62);
+    rgba(255, 255, 255, 0.353);
 
-  border: 1px solid rgba(255,255,255,.14);
+  border: 1px solid rgba(19,18,23,.12);
 
   box-shadow:
-    0 24px 80px rgba(0,0,0,.45),
-    inset 0 1px 0 rgba(255,255,255,.06);
+    0 24px 80px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.65);
 
   backdrop-filter: blur(24px) saturate(135%);
   -webkit-backdrop-filter: blur(24px) saturate(135%);
@@ -2962,3 +2982,4 @@ footer {
     inset 0 0 0 1px var(--accent),
     0 16px 34px rgba(0,0,0,.12);
 }
+
